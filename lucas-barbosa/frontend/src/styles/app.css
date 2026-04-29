@@ -123,6 +123,11 @@
     border-radius: 16px;
     border: 1px solid var(--cor-borda);
     background: #11141a;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+    min-height: unset;
   }
   
   .resultado h2 {
@@ -158,4 +163,62 @@
     .grupo-campos {
       grid-template-columns: 1fr;
     }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .menu__item {
+    text-decoration: none;
+    color: var(--cor-texto);
+    padding: 10px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+    background: #11141a;
+    transition: 0.2s ease;
+  }
+  
+  .menu__item:hover {
+    border-color: var(--cor-primaria);
+  }
+  
+  .menu__item--ativo {
+    background: rgba(110, 168, 254, 0.15);
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+  }
+
+  .resultado.abaixo {
+    border-left: 6px solid #60a5fa;
+    background: #eff6ff;
+  }
+  
+  .resultado.atletico {
+    border-left: 6px solid #22c55e;
+    background: #ecfdf5;
+  }
+  
+  .resultado.fitness {
+    border-left: 6px solid #84cc16;
+    background: #f7fee7;
+  }
+  
+  .resultado.aceitavel {
+    border-left: 6px solid #facc15;
+    background: #fffbeb;
+  }
+  
+  .resultado.elevado {
+    border-left: 6px solid #f97316;
+    background: #fff7ed;
+  }
+  
+  .resultado.muito-elevado {
+    border-left: 6px solid #ef4444;
+    background: #fef2f2;
   }
