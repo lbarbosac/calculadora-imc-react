@@ -1,224 +1,217 @@
 .pagina-principal {
-    min-height: 100vh;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecalho {
+  width: 100%;
+  max-width: var(--max-largura);
+  margin-bottom: 24px;
+}
+
+.cabecalho__conteudo {
+  background: rgba(23, 26, 33, 0.85);
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra);
+  border-radius: var(--raio);
+  padding: 28px;
+  text-align: center;
+}
+
+.cabecalho__tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(110, 168, 254, 0.12);
+  color: var(--cor-primaria);
+  font-size: 0.85rem;
+}
+
+.cabecalho__titulo {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cabecalho__texto {
+  margin: 12px 0 0;
+  color: var(--cor-secundaria);
+}
+
+.conteudo-principal {
+  width: 100%;
+  max-width: var(--max-largura);
+}
+
+.cartao {
+  background: rgba(23, 26, 33, 0.95);
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra);
+  border-radius: var(--raio);
+  padding: 24px;
+}
+
+.formulario {
+  display: grid;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-weight: 600;
+  color: var(--cor-normal);
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  background: #11141a;
+  color: var(--cor-texto);
+  outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(110, 168, 254, 0.15);
+}
+
+.grupo-campos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.botao {
+  border: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #6ea8fe, #4e7df0);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+}
+
+.botao:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.mensagem-erro {
+  margin: 0;
+  color: var(--cor-erro);
+  font-weight: 600;
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--cor-borda);
+  background: #11141a;
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  min-height: unset;
+}
+
+.resultado h2 {
+  margin-top: 0;
+}
+
+.resultado.abaixo {
+  border-left: 6px solid #60a5fa;
+  background: #111827;
+  color: #dbeafe;
+}
+
+.resultado.atletico {
+  border-left: 6px solid #22c55e;
+  background: #0f172a;
+  color: #dcfce7;
+}
+
+.resultado.fitness {
+  border-left: 6px solid #84cc16;
+  background: #1a1f12;
+  color: #ecfccb;
+}
+
+.resultado.aceitavel {
+  border-left: 6px solid #facc15;
+  background: #1f1a0a;
+  color: #fef9c3;
+}
+
+.resultado.elevado {
+  border-left: 6px solid #f97316;
+  background: #24170f;
+  color: #ffedd5;
+}
+
+.resultado.muito-elevado {
+  border-left: 6px solid #ef4444;
+  background: #2a1111;
+  color: #fee2e2;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.menu__item {
+  text-decoration: none;
+  color: var(--cor-texto);
+  padding: 10px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  background: #11141a;
+  transition: 0.2s ease;
+}
+
+.menu__item:hover {
+  border-color: var(--cor-primaria);
+}
+
+.menu__item--ativo {
+  background: rgba(110, 168, 254, 0.15);
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+}
+
+@media (max-width: 640px) {
+  .pagina-principal {
+    padding: 16px;
   }
-  
-  .cabecalho {
-    width: 100%;
-    max-width: var(--max-largura);
-    margin-bottom: 24px;
-  }
-  
+
+  .cartao,
   .cabecalho__conteudo {
-    background: rgba(23, 26, 33, 0.85);
-    border: 1px solid var(--cor-borda);
-    box-shadow: var(--sombra);
-    border-radius: var(--raio);
-    padding: 28px;
-    text-align: center;
+    padding: 18px;
   }
-  
-  .cabecalho__tag {
-    display: inline-block;
-    margin-bottom: 12px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: rgba(110, 168, 254, 0.12);
-    color: var(--cor-primaria);
-    font-size: 0.85rem;
-  }
-  
-  .cabecalho__titulo {
-    margin: 0;
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-  
-  .cabecalho__texto {
-    margin: 12px 0 0;
-    color: var(--cor-secundaria);
-  }
-  
-  .conteudo-principal {
-    width: 100%;
-    max-width: var(--max-largura);
-  }
-  
-  .cartao {
-    background: rgba(23, 26, 33, 0.95);
-    border: 1px solid var(--cor-borda);
-    box-shadow: var(--sombra);
-    border-radius: var(--raio);
-    padding: 24px;
-  }
-  
-  .formulario {
-    display: grid;
-    gap: 16px;
-  }
-  
-  .campo {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .campo label {
-    font-weight: 600;
-    color: var(--cor-normal);
-  }
-  
-  .campo input {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid var(--cor-borda);
-    border-radius: 14px;
-    background: #11141a;
-    color: var(--cor-texto);
-    outline: none;
-  }
-  
-  .campo input:focus {
-    border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(110, 168, 254, 0.15);
-  }
-  
+
   .grupo-campos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: 1fr;
   }
-  
-  .botao {
-    border: none;
-    border-radius: 14px;
-    padding: 14px 18px;
-    background: linear-gradient(135deg, #6ea8fe, #4e7df0);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  
-  .botao:hover {
-    transform: translateY(-1px);
-  }
-  
-  .botao:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-  
-  .mensagem-erro {
-    margin: 0;
-    color: var(--cor-erro);
-    font-weight: 600;
-  }
-  
-  .resultado {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 16px;
-    border: 1px solid var(--cor-borda);
-    background: #11141a;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    height: auto;
-    min-height: unset;
-  }
-  
-  .resultado h2 {
-    margin-top: 0;
-  }
-  
-  .resultado.normal {
-    border-left: 6px solid var(--cor-normal);
-  }
-  
-  .resultado.sobrepeso {
-    border-left: 6px solid var(--cor-sobrepeso);
-  }
-  
-  .resultado.obesidade {
-    border-left: 6px solid var(--cor-obesidade);
-  }
-  
-  .resultado.abaixo {
-    border-left: 6px solid #7dd3fc;
-  }
-  
-  @media (max-width: 640px) {
-    .pagina-principal {
-      padding: 16px;
-    }
-  
-    .cartao,
-    .cabecalho__conteudo {
-      padding: 18px;
-    }
-  
-    .grupo-campos {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 20px;
-  }
-  
-  .menu__item {
-    text-decoration: none;
-    color: var(--cor-texto);
-    padding: 10px 14px;
-    border: 1px solid var(--cor-borda);
-    border-radius: 999px;
-    background: #11141a;
-    transition: 0.2s ease;
-  }
-  
-  .menu__item:hover {
-    border-color: var(--cor-primaria);
-  }
-  
-  .menu__item--ativo {
-    background: rgba(110, 168, 254, 0.15);
-    border-color: var(--cor-primaria);
-    color: var(--cor-primaria);
-  }
-
-  .resultado.abaixo {
-    border-left: 6px solid #60a5fa;
-    background: #eff6ff;
-  }
-  
-  .resultado.atletico {
-    border-left: 6px solid #22c55e;
-    background: #ecfdf5;
-  }
-  
-  .resultado.fitness {
-    border-left: 6px solid #84cc16;
-    background: #f7fee7;
-  }
-  
-  .resultado.aceitavel {
-    border-left: 6px solid #facc15;
-    background: #fffbeb;
-  }
-  
-  .resultado.elevado {
-    border-left: 6px solid #f97316;
-    background: #fff7ed;
-  }
-  
-  .resultado.muito-elevado {
-    border-left: 6px solid #ef4444;
-    background: #fef2f2;
-  }
+}
